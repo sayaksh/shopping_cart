@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_cart/pages/items.page.dart';
+import 'package:flutter_cart/flutter_cart.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ItemsPage(),
+      home: const ItemsPage(
+        vegNonveg: null,
+        price: null,
+        deliveryTime: null,
+        deliveryType: null,
+        itemImg: null,
+        itemName: null,
+        netweight: null,
+      ),
     );
   }
 }
