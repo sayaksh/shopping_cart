@@ -25,7 +25,7 @@ class _ItemsPageState extends State<ItemsPage> {
       "item_img":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNOGduXJIycx-bURfBQ49hR5DLVDrPrjlYCQ&usqp=CAU",
       "item_name": "Apple - Best of Himalaya's",
-      "price": "169.5",
+      "price": "Rs. 169.5",
       "delivery_type": "Standard Delivery",
       "delivery_time": "(Tomorrow evening)"
     },
@@ -36,7 +36,7 @@ class _ItemsPageState extends State<ItemsPage> {
       "item_img":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm_MNqC2aJ4QuPNoa9f8NO4kn86PJfnVYd1zfJm0HIK0KgFmpLP3aiR5feD0taRbHF-5w&usqp=CAU",
       "item_name": "Chicken - Yummy Leg Piece",
-      "price": "200",
+      "price": "Rs. 200",
       "delivery_type": "Expresss Delivery",
       "delivery_time": "(Tomorrow morning)"
     },
@@ -47,7 +47,7 @@ class _ItemsPageState extends State<ItemsPage> {
       "item_img":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cIVXHPnXSXGZwwxvmONA_qdTbmsw7SoVag&usqp=CAU",
       "item_name": "Nutella - Taste of Hazelnuts",
-      "price": "245",
+      "price": "Rs. 245",
       "delivery_type": "Expresss Delivery",
       "delivery_time": "(Tomorrow morning)"
     },
@@ -58,7 +58,7 @@ class _ItemsPageState extends State<ItemsPage> {
       "item_img":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPNQ1Mc1Tk-G0w-05_wjMOpNow42o7gVBNOg&usqp=CAU",
       "item_name": "Whole Wheat Bread",
-      "price": "35",
+      "price": "Rs. 35",
       "delivery_type": "Standard Delivery",
       "delivery_time": "(Tomorrow evening)"
     },
@@ -69,7 +69,7 @@ class _ItemsPageState extends State<ItemsPage> {
       "item_img":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNOGduXJIycx-bURfBQ49hR5DLVDrPrjlYCQ&usqp=CAU",
       "item_name": "Apple - Best of Himalaya's",
-      "price": "169.5",
+      "price": "Rs. 169.5",
       "delivery_type": "Standard Delivery",
       "delivery_time": "(Tomorrow evening)"
     },
@@ -80,7 +80,7 @@ class _ItemsPageState extends State<ItemsPage> {
       "item_img":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPNQ1Mc1Tk-G0w-05_wjMOpNow42o7gVBNOg&usqp=CAU",
       "item_name": "Apple - Best of Himalaya's",
-      "price": "169.5",
+      "price": "Rs. 169.5",
       "delivery_type": "Standard Delivery",
       "delivery_time": "(Tomorrow evening)"
     },
@@ -97,17 +97,16 @@ class _ItemsPageState extends State<ItemsPage> {
         ),
       ),
       backgroundColor: const Color.fromARGB(255, 228, 219, 219),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            Container(
-              height: 30,
-              width: MediaQuery.of(context).size.width,
-              color: Colors.white,
-            ),
-            GridView.builder(
-                padding: const EdgeInsets.all(8),
+      body: Column(
+        children: [
+          Container(
+            height: 30,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.white,
+          ),
+          Expanded(
+            child: GridView.builder(
+                padding: const EdgeInsets.all(10),
                 itemCount: item_list.length,
                 shrinkWrap: true,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -125,9 +124,9 @@ class _ItemsPageState extends State<ItemsPage> {
                     deliveryTime: item_list[index]["delivery_time"],
                     netWeight: item_list[index]["net_weight"],
                   );
-                }))
-          ],
-        ),
+                })),
+          )
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[

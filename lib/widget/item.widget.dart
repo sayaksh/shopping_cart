@@ -68,14 +68,14 @@ class ItemListWidget extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(6.0),
             child: Text(
               price,
               style: const TextStyle(color: Colors.black, fontSize: 10),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(6.0),
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     primary: Colors.pink,
